@@ -39,8 +39,7 @@ export function App() {
 
   const getFilterContacts = () => {
     const normalizedFilter = filter.toLowerCase();
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
+    return contacts.filter(contact => contact.name.toLowerCase().includes(normalizedFilter)
     );
   };
 
