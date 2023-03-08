@@ -8,9 +8,8 @@ import { Layout } from './Layout';
 const getContacts = () => {
   const saveContacts = localStorage.getItem('contact');
   const parseContacts = JSON.parse(saveContacts);
-  if (saveContacts !== null) {
-    return parseContacts ?? [];
-  }
+  return parseContacts ? parseContacts : [];
+  
 };
 export function App() {
   const [contacts, setContacts] = useState(getContacts);
