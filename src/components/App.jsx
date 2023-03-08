@@ -9,7 +9,7 @@ const getContacts = () => {
   const saveContacts = localStorage.getItem('contact');
   if (saveContacts !== null) {
     const parseContacts = JSON.parse(saveContacts);
-    return parseContacts;
+    return parseContacts || [];
   }
 };
 export function App() {
